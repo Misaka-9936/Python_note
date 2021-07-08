@@ -1,0 +1,23 @@
+# -*- coding: utf-8 -*-
+
+# 1.1
+
+# 1.1.1 Input and output
+name = input('Please input your name:')
+print('hello,', name)
+
+# 1.1.2 Data Type
+0xff
+10_000_000_000, 0xa1b2_c3d4
+1.23e9, 1.2e-5    # 浮点数运算则可能会有四舍五入的误差
+# 字符串:允许用r''表示''内部的字符串默认不转义
+        允许用'''...'''的格式表示多行内容
+none
+
+# 1.1.3 Variable
+a = 'ABC'
+b = a
+a = 'XYZ'
+print(b)
+>>> ABC
+# 对变量赋值x = y是把变量x指向真正的对象，该对象是变量y所指向的。随后对变量y的赋值不影响变量x的指向。
