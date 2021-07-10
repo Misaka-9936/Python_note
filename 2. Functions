@@ -3,7 +3,68 @@
 
 -------------------------------------------------------------
 
-# 2.1
+# 2.1 调用函数
+abs()
+max()
+int()
+float()
+str()bool()
+
+-------------------------------------------------------------
+
+# 2.2 定义函数
+
+# 2.2.1 def
+def my_abs(x):                                  # 定义一abs函数
+    if x >= 0:
+        return x
+    else:
+        return -x
+
+x = input('Please input x for abs: x =')        # 此时x的类型为str
+x = int(x)                                      # 转换x的类型
+x = my_abs(x)
+print('abs(x) is', x)
+
+# 2.2.2 空函数pass
+if age >= 18:
+    pass
+# 缺少了 pass，代码运行就会有语法错误。
+
+# 2.2.3 参数检查
+def my_abs(x):                                  
+    if not isinstance(x, (int, float)):
+        raise TypeError('bad operand type')
+    if x >= 0:
+        return x
+    else:
+        return -x
+
+# 2.2.4 返回多个值
+def move(x, y, step, angle=0):
+    nx = x + step * math.cos(angle)
+    ny = y - step * math.sin(angle)
+    return nx, ny
+# 返回值是一个 tuple！
+# 返回一个 tuple 可以省略括号，而多个变量可以同时接收一个 tuple，按位置赋给对应的值
+
+# 2.2.5 练习
+def quadratic(a, b, c):
+    z1 = (-b + math.sqrt(b*b - 4*a*c)) / 2*a
+    z2 = (-b - math.sqrt(b*b - 4*a*c)) / 2*a
+    print('z1 =', z1)
+    print('z2 =', z2)
+    return z1, z2
+
+print('quadratic(2, 3, 1) =', quadratic(2, 3, 1))
+print('quadratic(1, 3, -4) =', quadratic(1, 3, -4))
+
+-------------------------------------------------------------
+
+# 2.3 
+
+
+
 
 
 
