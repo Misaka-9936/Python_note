@@ -81,6 +81,47 @@ if birth < 2000:
 else:
     print('00后')
 
+-------------------------------------------------------------
+
+# 1.5 cycle
+
+# 1.5.1 range()
+
+# 1.5.2 for
+sum = 0
+for x in range(101):
+    sum = sum + x
+print(sum)
+
+# 1.5.3 while
+L = ['Bart', 'Lisa', 'Adam']
+n = 0
+while n < 3:
+    print('hello,',L[n])
+    n = n + 1
+
+# 1.5.4 break
+
+# 1.5.5 continue
+
+-------------------------------------------------------------
+
+# 1.6 dict and set
+
+# 1.6.1 dict
+# 字典，查找速度
+# dict 是用空间来换取时间的一种方法
+
+# 1.6.2 set
+# set 可以看成数学意义上的无序和无重复元素的集合，因此，两个 set 可以做数学意义上的交集、并集等操作
+
+# 1.6.3 Immutable objects
+>>> a = 'abc'
+>>> b = a.replace('a', 'A')
+>>> b
+'Abc'
+>>> a
+'abc'
 
 
 
