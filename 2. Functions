@@ -160,3 +160,31 @@ def mul(x, *numbers):
 # 使用 *args 和 **kw 是 Python 的习惯写法，当然也可以用其他参数名，但最好使用习惯用法。
 # 命名的关键字参数是为了限制调用者可以传入的参数名，同时可以提供默认值。
 # 定义命名的关键字参数在没有可变参数的情况下不要忘了写分隔符 *，否则定义的将是位置参数。
+
+-------------------------------------------------------------
+
+# 2.6 递归
+def fact(n):
+    if n == 1:
+        return 1
+    else:
+        return n * fact(n-1)
+# 使用递归函数需要注意防止栈溢出。
+# 解决递归调用栈溢出的方法是通过尾递归优化
+def fact(n):
+    return fact_iter(n, 1)
+
+def fact_iter(num, product):
+    if num == 1:
+        return product
+    return fact_iter(num - 1, num * product)
+
+# 习题：
+def move(n, a, b, c):
+    if n == 1:
+        print(a, '-->', c)          # 直接搬过去
+    else:
+        move(n-1, a, c, b)          # 先把A上面的n-1个盘子搬到B
+        move(1, a, b, c)            # 把A的最后一个盘子般到C
+        move(n-1, b, a, c)          # 把B的n-1个盘子按同样的方式搬到C
+
