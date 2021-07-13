@@ -2,6 +2,21 @@
 # -*- coding: utf-8 -*-
 # By: Misaka_Clover
 
+-------------------------------------------------------------
+
+# 5.0 模块
+# py文件
+# 目录组织，顶层包名
+
+# 5.1 模块模版：
+#!/usr/bin/env python3
+# -*- coding: utf-8 -*-
+
+' a test module '
+
+__author__ = 'Misaka_Clover'
+
+# 其余略
 
 
 
