@@ -4,5 +4,86 @@
 
 -------------------------------------------------------------
 
+# 6.0 面向对象编程
+class Student(object):
+
+    def __init__(self, name, score):
+        self.name = name
+        self.score = score
+
+    def print_score(self):
+        print('%s: %s' % (self.name, self.score))
+
+bart = Student('Bart Simpson', 59)
+lisa = Student('Lisa Simpson', 87)
+bart.print_score()
+lisa.print_score()
+
+-------------------------------------------------------------
+
+# 6.1 类和实例
+
+# File_name: test.py
+
+#!/usr/bin/env python3
+# -*- coding: utf-8 -*-
+# By: Misaka_Clover
+
+import Student
+
+bart = Student.Student_class('Bart Simpson', 59)    # 使用时要是模块.类
+lisa = Student.Student_class('Lisa Simpson', 87)    # 或者模块.函数
+bart.print_score()                                  # 因为只引入了模块，尚未声明特定的类/函数
+lisa.print_score()
+
+print(bart.name)
+Student.in_module_print()
+
+# File_name: Student.py
+
+#!/usr/bin/env python3
+# -*- coding: utf-8 -*-
+# By: Misaka_Clover
+
+'a Sutdent module for test'
+
+__author__ = 'Misaka_Clover'
+
+class Student_class(object):                # 类名通常大写开头
+                                            # (object)：表示该类是从哪个类继承下来的
+                                            # 通常，如果没有合适的继承类，就使用 object 类，这是所有类最终都会继承的类。
+    def __init__(self, name, score):        # 注意：特殊方法 “__init__” 前后分别有两个下划线！！！
+        self.name = name
+        self.score = score
+    
+    def print_score(self):
+        print('%s: %s' % (self.name, self.score))
+
+def in_module_print():
+    print('我是模块里的函数')
+
+-------------------------------------------------------------
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
